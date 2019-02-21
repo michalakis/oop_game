@@ -3,4 +3,6 @@
  * app.js */
 
  const game = new Game();
- const phrase = new Phrase();
+ const phrase = new Phrase('This is A Phrase');
+
+ console.log(phrase.phrase);
