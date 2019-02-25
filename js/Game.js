@@ -11,11 +11,11 @@
 
      createPhrases(){
          const phrases = [
-            "You can't handle the truth",
-            "I'll be back",
+            "You cant handle the truth",
+            "I ll be back",
             "Merry Christmas you filthy animal",
             "Luke I am your father",
-            "Frankly, my dear, I don't give a damn"
+            "Frankly my dear I dont give a damn"
          ];
 
          return phrases;
