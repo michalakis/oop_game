@@ -29,7 +29,7 @@
                 li.className = "space";
             } else {
                 li.className = "hide";
-                li.classList.add("letter")
+                li.classList.add("letter");
                 li.classList.add(letter);
                 li.textContent = letter;
             }

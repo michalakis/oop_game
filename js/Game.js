@@ -39,7 +39,9 @@
     * Begins game by selecting a random phrase and displaying it to user
     */
     startGame() {
-        document.querySelector("#overlay").style.display = "none";
+        //document.querySelector("#overlay").style.display = "none";
+        document.querySelector("#overlay").classList.add("animated");
+        document.querySelector("#overlay").classList.add("bounceOutDown");
         this.activePhrase =  this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
     };
@@ -90,15 +92,19 @@
             message.textContent = "Congratulations! You Won!"
 
             const overlay = document.querySelector("#overlay");
-            overlay.style.display = "inherit";
+            //overlay.style.display = "inherit";
             overlay.className = "win"
+            overlay.classList.add("animated");
+            overlay.classList.add("bounceInUp");
         } else {
             const message = document.querySelector("#game-over-message");
             message.textContent = "Too Bad :( Try Again!"
             
             const overlay = document.querySelector("#overlay");
-            overlay.style.display = "inherit";
+            //overlay.style.display = "inherit";
             overlay.className = "lose"
+            overlay.classList.add("animated");
+            overlay.classList.add("bounceInUp");
         }
 
         const listItems = document.querySelectorAll("#phrase ul li");
