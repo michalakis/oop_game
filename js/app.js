@@ -14,3 +14,16 @@ document.querySelector("#qwerty").addEventListener("click", event => {
         game.handleInteraction(event.target);
     }
 });
+
+document.addEventListener("keydown", event => {
+    let key = event.key;
+
+    const buttons = document.querySelectorAll("button.key");
+    buttons.forEach( button => {
+        if(button.textContent === key && game !== null && button.disabled === false) {
+            game.handleInteraction(button);
+            
+            return;
+        }
+    });
+});
