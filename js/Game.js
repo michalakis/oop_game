@@ -84,5 +84,21 @@
     * Displays game over message
     * @param {boolean} gameWon - Whether or not the user won the game
     */
-    gameOver(gameWon) {};
+    gameOver(gameWon) {
+        if(gameWon) {
+            const message = document.querySelector("#game-over-message");
+            message.textContent = "Congratulations! You Won!"
+
+            const overlay = document.querySelector("#overlay");
+            overlay.style.display = "inherit";
+            overlay.className = "win"
+        } else {
+            const message = document.querySelector("#game-over-message");
+            message.textContent = "Too Bad :( Try Again!"
+            
+            const overlay = document.querySelector("#overlay");
+            overlay.style.display = "inherit";
+            overlay.className = "lose"
+        }
+    };
  }
