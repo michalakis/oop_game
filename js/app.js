@@ -2,7 +2,9 @@
  * Project 4 - OOP Game App
  * app.js */
 
- const game = new Game();
- const phrase = new Phrase('This is A Phrase');
+const game = new Game();
 
- console.log(phrase.phrase);
+document.querySelector("#btn__reset").addEventListener("click", event => {
+    game.startGame();
+    console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
+});
