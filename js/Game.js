@@ -100,6 +100,24 @@
             overlay.style.display = "inherit";
             overlay.className = "lose"
         }
+
+        const listItems = document.querySelectorAll("#phrase ul li");
+        listItems.forEach( item => {
+            item.remove();
+        });
+
+        const buttons = document.querySelectorAll("button.key");
+        buttons.forEach( button => {
+            button.classList.remove("chosen");
+            button.classList.remove("wrong");
+            button.disabled = false;
+        });
+
+        const lives = document.querySelectorAll("#scoreboard ol li img");
+
+        for(let i = 0; i < lives.length; i++) {
+            lives[i].setAttribute("src", "images/liveHeart.png");
+        }
     };
 
     /**
